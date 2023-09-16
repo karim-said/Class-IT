@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 
 namespace Constructor
 {
@@ -10,17 +9,10 @@ namespace Constructor
 
     public class A
     {
-        private readonly University _ttu;     
-
-        public A(University ttu)
-        {
-            _ttu = ttu;
-        }
-
-
+        private readonly University _ttu;
         public A() { }
+        public A(University ttu) => _ttu = ttu;
         public A(string name) => Console.WriteLine(name);
-
         
         public int Id { get; set; }
 
@@ -41,6 +33,7 @@ namespace Constructor
         {
             var dmt = new University();
 
+            dmt.Num = 15;
             A a = new A(dmt);              
         }
     }
