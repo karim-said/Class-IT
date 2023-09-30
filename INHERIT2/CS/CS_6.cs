@@ -15,7 +15,10 @@
         public string Shoot()
         {
             if (CountOfBullet == 0)
+            {
                 ReCharg();
+                return null;
+            }
 
             CountOfBullet--;
            return $"Pah pah {CountOfBullet}";
@@ -30,25 +33,11 @@
     public class Player
     {
         public int Cash;
-        public int Score;
-        public byte Health;
+        public int Score = 0;
+        public byte Health = 100;
+        protected string Type;
         public string Name;
-        public string Type;
-        public Gun _gun;
 
-        public Player(int cash, int score, byte health, string name, string type, Gun gun)
-        {
-            Cash = cash;
-            Score = score;
-            Health = health;
-            Name = name;
-            Type = type;
-            _gun = gun;
-        }
-
-
-
-        ///public byte  Protect { get; set; }
 
         public string MoveFront() => "I'm going to front";
         public string MoveBack() => "I'm going back";
