@@ -1,6 +1,5 @@
 ﻿namespace ConsoleApp1.Floder
-{
- 
+{ 
     public class A 
     {
         public A()
