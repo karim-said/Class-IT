@@ -12,6 +12,9 @@ namespace INHERET3
             notInternal.Foo();
             //Internal _internal = new Internal();
 
+            B b = new B();
+
+            b.Bar();
             Console.WriteLine("Hello World!");
         }
     }
