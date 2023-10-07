@@ -419,13 +419,14 @@
 ############################################################################################################
 21.Задание	
 
-		Создать Player,
+		Создать Projector,
 		имеющий переменные
-		NameAlbum
-		Author
-		Singer
-		PlayListName
-		Speed
+		Name
+		width,
+		height,
+		sizeofDispaly
+		Status
+		StatusMode
 
 		методи:
 		Констркустор перегрузка должна бит
