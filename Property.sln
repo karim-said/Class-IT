@@ -30,6 +30,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enums", "Enums\Enums.csproj", "{5729B172-998A-4338-B7D0-BA4522BB1F00}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dilboz.Messenger", "Dilboz.Messenger", "{D93967A5-6C2E-4A78-8693-EA98244B4585}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Api.Messenger", "Dilboz.Messenger\Api.Messenger\Api.Messenger.csproj", "{AD3CA9CC-0D53-4610-AA16-F37AFF3EDD60}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -172,11 +176,26 @@ Global
 		{5729B172-998A-4338-B7D0-BA4522BB1F00}.Release|x64.Build.0 = Release|Any CPU
 		{5729B172-998A-4338-B7D0-BA4522BB1F00}.Release|x86.ActiveCfg = Release|Any CPU
 		{5729B172-998A-4338-B7D0-BA4522BB1F00}.Release|x86.Build.0 = Release|Any CPU
+		{AD3CA9CC-0D53-4610-AA16-F37AFF3EDD60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD3CA9CC-0D53-4610-AA16-F37AFF3EDD60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD3CA9CC-0D53-4610-AA16-F37AFF3EDD60}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{AD3CA9CC-0D53-4610-AA16-F37AFF3EDD60}.Debug|x64.Build.0 = Debug|Any CPU
+		{AD3CA9CC-0D53-4610-AA16-F37AFF3EDD60}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AD3CA9CC-0D53-4610-AA16-F37AFF3EDD60}.Debug|x86.Build.0 = Debug|Any CPU
+		{AD3CA9CC-0D53-4610-AA16-F37AFF3EDD60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD3CA9CC-0D53-4610-AA16-F37AFF3EDD60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD3CA9CC-0D53-4610-AA16-F37AFF3EDD60}.Release|x64.ActiveCfg = Release|Any CPU
+		{AD3CA9CC-0D53-4610-AA16-F37AFF3EDD60}.Release|x64.Build.0 = Release|Any CPU
+		{AD3CA9CC-0D53-4610-AA16-F37AFF3EDD60}.Release|x86.ActiveCfg = Release|Any CPU
+		{AD3CA9CC-0D53-4610-AA16-F37AFF3EDD60}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {90E389E5-019E-40D5-AD69-378F5F16B649}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AD3CA9CC-0D53-4610-AA16-F37AFF3EDD60} = {D93967A5-6C2E-4A78-8693-EA98244B4585}
 	EndGlobalSection
 EndGlobal
