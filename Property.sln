@@ -30,9 +30,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp1", "ConsoleApp1\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enums", "Enums\Enums.csproj", "{5729B172-998A-4338-B7D0-BA4522BB1F00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomClassTask", "CustomClassTask\CustomClassTask.csproj", "{FFAC608F-1DF9-4BAE-AD43-FB9DE3BC8D22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomClassTask", "CustomClassTask\CustomClassTask.csproj", "{FFAC608F-1DF9-4BAE-AD43-FB9DE3BC8D22}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppCustomTask", "ConsoleAppCustomTask\ConsoleAppCustomTask.csproj", "{19ECA54C-8DA0-4A18-BFCE-8183DB4FB750}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleAppCustomTask", "ConsoleAppCustomTask\ConsoleAppCustomTask.csproj", "{19ECA54C-8DA0-4A18-BFCE-8183DB4FB750}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Abstract", "Abstract\Abstract.csproj", "{A989541A-E409-45F7-83B6-D02051308820}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -200,6 +202,18 @@ Global
 		{19ECA54C-8DA0-4A18-BFCE-8183DB4FB750}.Release|x64.Build.0 = Release|Any CPU
 		{19ECA54C-8DA0-4A18-BFCE-8183DB4FB750}.Release|x86.ActiveCfg = Release|Any CPU
 		{19ECA54C-8DA0-4A18-BFCE-8183DB4FB750}.Release|x86.Build.0 = Release|Any CPU
+		{A989541A-E409-45F7-83B6-D02051308820}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A989541A-E409-45F7-83B6-D02051308820}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A989541A-E409-45F7-83B6-D02051308820}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{A989541A-E409-45F7-83B6-D02051308820}.Debug|x64.Build.0 = Debug|Any CPU
+		{A989541A-E409-45F7-83B6-D02051308820}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A989541A-E409-45F7-83B6-D02051308820}.Debug|x86.Build.0 = Debug|Any CPU
+		{A989541A-E409-45F7-83B6-D02051308820}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A989541A-E409-45F7-83B6-D02051308820}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A989541A-E409-45F7-83B6-D02051308820}.Release|x64.ActiveCfg = Release|Any CPU
+		{A989541A-E409-45F7-83B6-D02051308820}.Release|x64.Build.0 = Release|Any CPU
+		{A989541A-E409-45F7-83B6-D02051308820}.Release|x86.ActiveCfg = Release|Any CPU
+		{A989541A-E409-45F7-83B6-D02051308820}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
