@@ -21,7 +21,7 @@ type Tuner struct {
 }
 
 type Channel struct {
-	Number string
+	Number int
 	Name   string
 }
 
@@ -74,4 +74,30 @@ func (t *TV) ChangeInput() {
 	}
 	t.InputMode = inputMode
 	fmt.Printf("Переключен режим %s\n", t.InputMode.Name)
+}
+
+func (t *TV) ChangeChannel(channels []Channel) {
+
+	for _, channel := range channels {
+		fmt.Printf("%d - %s\n", channel.Number, channel.Name)
+	}
+
+	fmt.Printf("Введите номер канала\n")
+	var chanNumber int
+	fmt.Scan(&chanNumber)
+
+	channelFound := false
+
+	for _, channel := range channels {
+		if channel.Number == chanNumber {
+			t.Channel = channel
+			fmt.Printf("Переключен канал %d - %s\n", channel.Number, channel.Name)
+			channelFound = true
+			break
+		}
+	}
+
+	if !channelFound {
+		fmt.Printf("Канал с номером %d не найден\n", chanNumber)
+	}
 }
