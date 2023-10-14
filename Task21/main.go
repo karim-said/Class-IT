@@ -2,57 +2,60 @@ package main
 
 import (
 	"fmt"
-	"projector-class/models"
+	"projector-class/projector"
 )
 
 func main() {
 
-	proj := &models.Projector{
-		Name: "Canon",
-		Size: models.Size{
-			Height: 1920,
-			Width:  1080,
-		},
-		Focus: models.Focus{
-			FocusDistance: 10,
-		},
-		Mode: models.Mode{
-			Name: "HDMI",
-		},
-		Status: false,
+	proj := &projector.Projector{
+		Name:       "Canon",
+		Model:      "LV-X310ST",
+		Size:       projector.Size{},
+		Focus:      projector.Focus{},
+		Mode:       projector.Mode{},
+		Brightness: 50,
+		Status:     false,
 	}
 
-	var projectorIF models.ProjectorInterface
+	var projectorIF projector.InterfaceProjector
 	projectorIF = proj
 
 	for {
-
-		fmt.Println("===================================================")
-
-		fmt.Printf("Введите число для настройки проектора.\n " +
-			"1 - Настроить размер\n " +
-			"2 - Настроить фокус\n " +
-			"3 - Настроить режим\n " +
-			"4 - Включить/Выключить\n " +
-			"5 - Информация о проекторе\n ")
+		fmt.Println("-----------------------------------------")
+		fmt.Printf("Выберите команду для настройки проектора\n" +
+			"0 - Выключить\n" +
+			"1 - Включить\n" +
+			"2 - Установить разрешение\n" +
+			"3 - Установить фокусное растояние\n" +
+			"4 - Переключить вход\n" +
+			"5 - Уменьшить яркость\n" +
+			"6 - Увеличить яркость\n" +
+			"7 - Получить информацию\n")
 
 		var command int
 		fmt.Scan(&command)
 
 		switch command {
+		case 0:
+			projectorIF.TurnOff()
 		case 1:
-			projectorIF.SetCustomSize()
+			projectorIF.TurnOn()
 		case 2:
-			projectorIF.SetFocus()
+			projectorIF.SetCustomSize()
 		case 3:
-			projectorIF.SetMode()
+			projectorIF.SetFocus()
 		case 4:
-			projectorIF.Turn()
+			projectorIF.SetMode()
 		case 5:
+			projectorIF.BrightnessDown()
+		case 6:
+			projectorIF.BrightnessUp()
+		case 7:
 			projectorIF.GetInfo()
+
 		default:
 			fmt.Println("Неизвестная команда")
 		}
-
 	}
+
 }
