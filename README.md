@@ -1,6 +1,5 @@
 ﻿# Markdown File
 
-
 1.Задание 
 		Создать следующие классы: 
 			человек, 
@@ -344,21 +343,22 @@
 ############################################################################################################
 18.Задание	
 
-		Создать Browser, 
+		Создать ExplorerWindows, 
 		имеющий переменные
-		Url
-		CoutOfPage
-		CurrentPage
-
+		Address
+		SizeObject
+		 
 		методи:
 		Констркустор перегрузка должна бит
 
 		Back()
 		Next()
-		EditUrl()
+		EditAddress()
 		Refresh()
-		ShowHistory()
-		AddPageToHome()
+		Copy()
+		Past()
+		Delete()
+		Rename()
 ############################################################################################################
 19.Задание	
 
@@ -419,13 +419,14 @@
 ############################################################################################################
 21.Задание	
 
-		Создать Player,
+		Создать Projector,
 		имеющий переменные
-		NameAlbum
-		Author
-		Singer
-		PlayListName
-		Speed
+		Name
+		width,
+		height,
+		sizeofDispaly
+		Status
+		StatusMode
 
 		методи:
 		Констркустор перегрузка должна бит
@@ -457,4 +458,123 @@
 		OpenDoor()
 		CloseDoor()
 		ClearWater()
+############################################################################################################
+23.Задание	
 
+		Создать TV,
+		имеющий переменные
+		Name
+		Status
+		InputMode
+		Tuner
+		Channel
+		Volume
+
+		методи:
+		Констркустор перегрузка должна бит
+
+		On()
+		Off()
+		Mute()
+		ChannelUp()
+		ChannelDown()
+		VolumeUp()
+		VolumeDown()
+		ChangeTuner()
+		ChangeInput()
+############################################################################################################
+24.Задание	
+
+		Создать DVD,
+		имеющий переменные
+		Name
+		Status
+		OutputMode
+		DiskType
+		Volume
+		Track
+
+		методи:
+		Констркустор перегрузка должна бит
+
+		On()
+		Off()
+		Mute()
+		NextTrack()
+		PrevTrack()
+		VolumeUp()
+		VolumeDown()
+		NextScore()
+		PrewScore()
+		Pause()
+		Stop()
+		Play()
+		Eject()
+		Close()
+############################################################################################################
+25.Задание	
+
+		Создать обект для вичесления плошад и приметер гемометрических фигур
+		[
+			Квадрат,
+			Прямоуголник,
+			ПрямоуголнийТриуголник
+			РавносторонийТриуголник
+			Колсо
+			Трапетсия
+		],
+		имеющий переменные
+		a,
+		b,
+		c,
+		d,
+		R,
+		P,
+		S
+
+		методи:
+		Констркустор перегрузка должна бит
+
+		SquareOfSquare(), 
+		SquareOfRectangle(),
+		SquareOfRectangular()
+		SquareOfTriangle()
+		SquareOfEquilateral()
+		SquareOfTriangle()
+		SquareOfCircle()
+		SquareOfTrapezium()
+
+		PerimeterOfSquare(), 
+		PerimeterOfRectangle(),
+		PerimeterOfRectangular()
+		PerimeterOfTriangle()
+		PerimeterOfEquilateral()
+		PerimeterOfTriangle()
+		PerimeterOfCircle()
+		PerimeterOfTrapezium()
+############################################################################################################
+26.Задание	
+
+		Создать обект для решения квадратический уравнения
+		[
+			ax^2 = 0, 
+			ax^2 + b = 0,
+			ax^2 + bx = 0,
+			ax^2 + bx + c = 0 
+		],
+		имеющий переменные
+		a,
+		b,
+		c,
+		d,
+		x1,
+		x2,
+		D
+
+		методи:
+		Констркустор перегрузка должна бит
+
+		ax2_0()
+		ax2_b_0()
+		ax2_bx_0()
+		ax2_bx_c_0()
