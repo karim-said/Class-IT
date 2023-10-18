@@ -2,25 +2,25 @@
 
 class WashMashine
 {
-    public string Name { get; set; }
-    public string State { get; set; }
-    public string Mode { get; set; }
-    public int Speed { get; set; }
+    public string Name { get; set; } = "Samsung";
+    public bool Status { get; set; } = false;
+    public Mode WashingMode { get; set; } = Mode.Normal;
+    int Speed = 0;
 
-
-    public WashMashine()
+    public enum Mode
     {
-        Name = "WashMashine";
-        State = "Off";
-        Mode = "Normal";
-        Speed = 0;
+        Normal,
+        Quick,
+        Wool,
+        Allergen,
+        SelfClean
     }
 
     public void Start()
     {
-        if (State == "Off")
+        if (Status == false)
         {
-            State = "On";
+            Status = true;
             Console.WriteLine("WashMashine started.");
         }
         else
@@ -31,9 +31,9 @@ class WashMashine
 
     public void Stop()
     {
-        if (State == "On")
+        if (!Status)
         {
-            State = "Off";
+            Status = false;
             Console.WriteLine("WashMashine stopped.");
         }
         else
@@ -42,10 +42,23 @@ class WashMashine
         }
     }
 
-    public void ChooseMode(string mode)
+    public void ChooseMode(Mode mode)
     {
-        Mode = mode;
-        Console.WriteLine($"Selected mode: {mode}");
+        switch (mode)
+        {
+            case Mode.Normal:
+                Console.WriteLine($"Selected mode: {mode}");
+                break;
+            case Mode.SelfClean:
+                Console.WriteLine($"Selected mode: {mode}");
+                break;
+            case Mode.Quick:
+                Console.WriteLine($"Selected mode: {mode}");
+                break;
+            case Mode.Allergen:
+                Console.WriteLine($"Selected mode: {mode}");
+                break;
+        }
     }
 
     public void AddWater()
@@ -74,8 +87,9 @@ class Program
     static void Main(string[] args)
     {
         WashMashine myWashMashine = new WashMashine();
+        
         myWashMashine.Start();
-        myWashMashine.ChooseMode("Quick");
+        myWashMashine.ChooseMode(WashMashine.Mode.Normal);
         myWashMashine.AddWater();
         myWashMashine.CloseDoor();
         myWashMashine.Start(); 
