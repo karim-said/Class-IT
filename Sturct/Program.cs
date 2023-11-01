@@ -7,7 +7,8 @@ namespace Sturct
     {
         static void Main(string[] args)
         {
-            PointStruct pS;
+            DateTime dateTime;
+            //PointStruct pS;
             PointClass pC = new PointClass();
 
             pS.x = 32;
