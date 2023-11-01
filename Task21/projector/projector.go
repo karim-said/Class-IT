@@ -3,12 +3,11 @@ package projector
 import "fmt"
 
 type InterfaceProjector interface {
-	TurnOff()       // выключить
-	TurnOn()        // включить
-	SetCustomSize() // установить разрешение
-	SetFocus()      // установить фокусное разрешение
-	SetMode()       // установить режим
-
+	TurnOff()        // выключить
+	TurnOn()         // включить
+	SetCustomSize()  // установить разрешение
+	SetFocus()       // установить фокусное разрешение
+	SetMode()        // установить режим
 	BrightnessDown() // уменьшить яркость
 	BrightnessUp()   // увеличить яркость
 	GetInfo()        // получить информацию
@@ -35,6 +34,16 @@ type Projector struct {
 	Mode       Mode   // режим
 	Brightness int    // яркость
 	Status     bool   // состояние
+}
+
+func (p *Projector) TurnOff() {
+	p.Status = false
+	fmt.Printf("Проектор выключен\n")
+}
+
+func (p *Projector) TurnOn() {
+	p.Status = true
+	fmt.Printf("Проектор включен\n")
 }
 
 func (p *Projector) SetCustomSize() {
@@ -98,19 +107,11 @@ func (p *Projector) SetMode() {
 	fmt.Printf("Установлен режим %s\n", mode.Name)
 }
 
-func (p *Projector) TurnOff() {
-	p.Status = false
-	fmt.Printf("Проектор выключен\n")
-}
-
-func (p *Projector) TurnOn() {
-	p.Status = true
-	fmt.Printf("Проектор включен\n")
-}
-
-func (p *Projector) GetInfo() {
-	fmt.Printf("Проектор: %s, Размер: %d на %d, Фокусное расстояние: %d мм, Режим: %s, Статус: %t\n",
-		p.Name, p.Size.Height, p.Size.Width, p.Focus.FocusDistance, p.Mode.Name, p.Status)
+func (p *Projector) BrightnessDown() {
+	if p.Brightness > 0 {
+		p.Brightness--
+	}
+	fmt.Printf("Яркость %d\n", p.Brightness)
 }
 
 func (p *Projector) BrightnessUp() {
@@ -120,9 +121,7 @@ func (p *Projector) BrightnessUp() {
 	fmt.Printf("Яркость %d\n", p.Brightness)
 }
 
-func (p *Projector) BrightnessDown() {
-	if p.Brightness > 0 {
-		p.Brightness--
-	}
-	fmt.Printf("Яркость %d\n", p.Brightness)
+func (p *Projector) GetInfo() {
+	fmt.Printf("Проектор: %s, Размер: %d на %d, Фокусное расстояние: %d мм, Яркость: %d, Режим: %s, Статус: %t\n",
+		p.Name, p.Size.Height, p.Size.Width, p.Focus.FocusDistance, p.Brightness, p.Mode.Name, p.Status)
 }

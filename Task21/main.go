@@ -1,8 +1,8 @@
 package main
 
 import (
+	"Task21/projector"
 	"fmt"
-	"projector-class/projector"
 )
 
 func main() {
@@ -52,7 +52,6 @@ func main() {
 			projectorIF.BrightnessUp()
 		case 7:
 			projectorIF.GetInfo()
-
 		default:
 			fmt.Println("Неизвестная команда")
 		}
