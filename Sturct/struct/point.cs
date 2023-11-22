@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace SoliNav
 {
-    public struct SpaceStruct : PointStruct
+    public struct SpaceStruct 
     {
         public int _z;       
 
