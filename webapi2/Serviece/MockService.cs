@@ -1,71 +1,12 @@
 ﻿using System.Linq;
 using webapi.model;
-using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
-namespace webapi.Controllers
+namespace webapi.Mock
 {
-    [ApiController]
-    [Route("[controller]")]
-    public class ShapeController : ControllerBase
-    {
-        List<Shape> _mockshaps = new List<Shape>();
-
-        public ShapeController()
-        {
-            MockShape mock = new MockShape();
-            _mockshaps = mock.PushShape();
-        }    
-
-        [HttpGet] 
-        [Route("")]
-        public ActionResult<IEnumerable<Shape>> GetShapes()
-        {
-            return Ok(_mockshaps);
-        }
-
-        [HttpGet]
-        [Route("id")]
-        public ActionResult<Shape> GetShapeById(int id)
-        {
-            var shape = _mockshaps.FirstOrDefault(x => x.Id == id);
-
-            if (shape == null)
-                return NotFound($"This Entity by id:{id} not found");
-            return shape;
-        }
-
-        [HttpGet]
-        [Route("name")]
-        public ActionResult<Shape> GetShapeByName(string name)
-        {
-            var shape = _mockshaps.FirstOrDefault(x => x.Name == name);
-
-            if (shape == null)
-                return NotFound($"This Entity by name:{name} not found");
-            return shape;
-        }
-
-        [HttpDelete]
-        [Route("id")]
-        public ActionResult RemoveShapeById(int id)
-        {
-            var shape = _mockshaps.FirstOrDefault(x => x.Id == id);
-            _mockshaps.Remove(shape);
-
-            if (shape == null)
-                return NotFound($"This Entity by id:{id} not found");
-            return Ok();
-        }
-    }
-
-
-    public class MockShape
-    {       
-        public List<Shape> PushShape()
-        {
-
-          var  shapes = new List<Shape>
+    public class MockService : IMockService
+    { 
+        List<Shape> Shapes = new List<Shape>
             {
                 new Shape
                 {
@@ -125,8 +66,42 @@ namespace webapi.Controllers
                 },
             };
 
-            return shapes;
+        public List<Shape> GetShapes()
+        {
+            return Shapes;
+        }
+
+        public Shape GetShapeById(int id)
+        {
+            return Shapes.FirstOrDefault(s => s.Id == id);
+        }
+
+        public Shape GetShapeByName(string name)
+        {
+            return Shapes.FirstOrDefault(s => s.Name == name);
+        }
+        public void CreateShapes(Shape shape)
+        {
+            Shapes.Add(shape);
+        }
+
+        public void RevmoeShapes(int id)
+        {
+           var shape =  Shapes.FirstOrDefault(s => s.Id == id);
+
+            Shapes.Remove(shape);
+        }
+
+        public void UpdateShapes(Shape _shape)
+        {
+            var shape = Shapes.FirstOrDefault(s => s.Id == _shape.Id);
+
+            var index = Shapes.IndexOf(shape);
+
+            Shapes[index].Id = _shape.Id;
+            Shapes[index].Name = _shape.Name;
+            Shapes[index].Area = _shape.Area;
+            Shapes[index].Perimetr = _shape.Perimetr;
         }
     }
-
 }
