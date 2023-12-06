@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using webapi2.Serviece;
 
 namespace webapi2
 {
@@ -28,8 +29,10 @@ namespace webapi2
             });
 
             services.AddControllers();
-            services.AddSingleton<IMockService, MockService>();
+            //services.AddSingleton<IMockService, MockService>();
+            services.AddTransient<IMockService, SQLService>();
 
+            
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "webapi2", Version = "v1" });

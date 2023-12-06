@@ -10,5 +10,7 @@ namespace webapi.model
         public double Area { get; set; }
         public double Perimetr { get; set; }
         public int? CountOfAngle { get; set; }
+        public int CategoryId { get; set; }
+        public ShapeCategory ShapeCategory   { get; set; }
     }
 }

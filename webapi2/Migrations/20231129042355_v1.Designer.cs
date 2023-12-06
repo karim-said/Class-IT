@@ -10,7 +10,7 @@ using webapi2.Data;
 namespace webapi2.Migrations
 {
     [DbContext(typeof(DbContextShape))]
-    [Migration("20231125034846_v1")]
+    [Migration("20231129042355_v1")]
     partial class v1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -42,7 +42,7 @@ namespace webapi2.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Categories");
+                    b.ToTable("Shapes");
                 });
 #pragma warning restore 612, 618
         }

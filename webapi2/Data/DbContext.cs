@@ -8,6 +8,7 @@ namespace webapi2.Data
         public DbContextShape(DbContextOptions options) : base(options) { }
 
         public DbSet<Shape> Shapes { get; set; }
+        public DbSet<ShapeCategory> ShapeCategory { get; set; }
 
     }
 }

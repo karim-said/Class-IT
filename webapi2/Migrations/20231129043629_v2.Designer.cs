@@ -10,7 +10,7 @@ using webapi2.Data;
 namespace webapi2.Migrations
 {
     [DbContext(typeof(DbContextShape))]
-    [Migration("20231125101733_v2")]
+    [Migration("20231129043629_v2")]
     partial class v2
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -31,6 +31,9 @@ namespace webapi2.Migrations
                     b.Property<double>("Area")
                         .HasColumnType("float");
 
+                    b.Property<int>("CategoryId")
+                        .HasColumnType("int");
+
                     b.Property<int?>("CountOfAngle")
                         .HasColumnType("int");
 
@@ -40,9 +43,43 @@ namespace webapi2.Migrations
                     b.Property<double>("Perimetr")
                         .HasColumnType("float");
 
+                    b.Property<int?>("ShapeCategoryId")
+                        .HasColumnType("int");
+
                     b.HasKey("Id");
 
+                    b.HasIndex("ShapeCategoryId");
+
                     b.ToTable("Shapes");
+                });
+
+            modelBuilder.Entity("webapi.model.ShapeCategory", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("CategoryName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("ShapeCategory");
+                });
+
+            modelBuilder.Entity("webapi.model.Shape", b =>
+                {
+                    b.HasOne("webapi.model.ShapeCategory", "ShapeCategory")
+                        .WithMany("Shapes")
+                        .HasForeignKey("ShapeCategoryId");
+
+                    b.Navigation("ShapeCategory");
+                });
+
+            modelBuilder.Entity("webapi.model.ShapeCategory", b =>
+                {
+                    b.Navigation("Shapes");
                 });
 #pragma warning restore 612, 618
         }
