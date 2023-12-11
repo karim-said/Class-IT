@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
+using System.Collections;
 
 namespace dataS
 {
@@ -7,8 +7,12 @@ namespace dataS
     {
         static void Main(string[] args)
         {
-            List<string> list = new List<string>(); 
-
+            Stack st = Stack();
+       
+            foreach (var item in list)
+            {
+                Console.WriteLine(item);
+            }
 
         }
     }

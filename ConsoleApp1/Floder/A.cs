@@ -2,19 +2,13 @@
 { 
     public class A 
     {
-        public A()
-        {
-
-        }
+        public A() {}
         public A(string a) => System.Console.WriteLine("Constructor from A" + a);
     }
 
     public class B : A
     {
-        public B()
-        {
-
-        }
+        public B()  {}
         static string b = "Tojikiston ba pesh";
         public B(int a) : base(b) => System.Console.WriteLine("Constructor from B");
     }

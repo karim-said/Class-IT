@@ -16,11 +16,6 @@ namespace Constructor
         
         public int Id { get; set; }
 
-        //public void Foo()
-        //{
-        //    ttu.Num = 23;
-        //}
-
         public void Chumchi()
         {
             Console.WriteLine("Chchi");

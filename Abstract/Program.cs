@@ -11,8 +11,7 @@ namespace Abstract
             Weapon[] Vintovka = {new AK47(), new M16()};
 
             Vintovka[0].Shoot();
-            Vintovka[1].Shoot();
-            
+            Vintovka[1].Shoot();            
             
         }
     }

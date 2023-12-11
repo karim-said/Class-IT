@@ -2,9 +2,7 @@
 
 namespace Property
 {
-        //private
-        //protected
-        //public
+   
     public class B
     {
         public string Move()
@@ -19,22 +17,14 @@ namespace Property
         B _b = new B();
 
         public A()
-        {
-            _b.Move();
-        }
-
+        {  _b.Move(); }
     }
     internal class Program
     {
         static void Foo()
-        {
-            A a = new A();
-        }
+        { A a = new A(); }
 
         static void Main(string[] args)
-        {
-            Foo();
-        }
-       
+        { Foo(); }       
     }
 }

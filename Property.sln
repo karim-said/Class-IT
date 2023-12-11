@@ -54,7 +54,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webapi", "webapi\webapi.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "webapi2", "webapi2\webapi2.csproj", "{2C594DF1-DE04-44C0-882A-A9C301CCD45F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dataS", "dataS\dataS.csproj", "{0C5709AA-4111-426D-991E-E39603070588}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dataS", "dataS\dataS.csproj", "{0C5709AA-4111-426D-991E-E39603070588}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Exam", "Exam", "{24803F39-4C72-47D7-BD5F-167BFCB77CD7}"
+	ProjectSection(SolutionItems) = preProject
+		D:\Digital book\DTT\2023-2024\Technologi programing\Ticket of Exam.docx = D:\Digital book\DTT\2023-2024\Technologi programing\Ticket of Exam.docx
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

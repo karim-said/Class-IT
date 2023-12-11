@@ -23,7 +23,7 @@ namespace Pol2
         }
     }
 
-    public class Ovkasha
+    public class Ovkashak
     {
         public void Pushss()
         {

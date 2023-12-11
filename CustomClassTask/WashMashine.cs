@@ -10,8 +10,6 @@ namespace CustomClassTask
         public string Mode { get; set; }
         public int Speed { get; set; }
 
-
-
         public WashMashine()
         {
             Name = "WashMashine";
@@ -19,7 +17,6 @@ namespace CustomClassTask
             Mode = "Normal";
             Speed = 0;
         }
-
 
         public void Start()
         {
@@ -36,7 +33,6 @@ namespace CustomClassTask
                 Console.WriteLine("WashMashine is already on.");
             }
         }
-
         private void AddWater()
         {
             Console.WriteLine("Water added to the WashMashine.");
@@ -53,30 +49,23 @@ namespace CustomClassTask
                 Console.WriteLine("WashMashine is already off.");
             }
         }
-
         public void ChooseMode(string mode)
         {
             Mode = mode;
             Console.WriteLine($"Selected mode: {mode}");
         }
-
-
-
         public string OpenDoor()
         {
             return "Door opened.";
         }
-
         public void CloseDoor()
         {
             Console.WriteLine("Door closed.");
         }
-
         public void ClearWater()
         {
             Console.WriteLine("Water cleared from the WashMashine.");
         }
-
         public void ThrowClothes()
         {
             Console.WriteLine("Clothes was thrown");

@@ -6,7 +6,7 @@ namespace Pol2
     {
         static void Main(string[] args)
         { 
-            var kamaz = new Kamaz<Ovkasha>();
+            var kamaz = new Kamaz<Ovkashak>();
 
             kamaz.Move();
             kamaz.Yagonchi.Pushss();

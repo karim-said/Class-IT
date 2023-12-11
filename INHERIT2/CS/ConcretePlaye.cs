@@ -2,9 +2,7 @@
 {
     public class ConcretePlaye : Player
     {
-        public Gun _gun;
-
-        
+        public Gun _gun;        
         public ConcretePlaye(int cash, string name, string type, Gun gun)
         {
             Cash = cash;
@@ -12,11 +10,7 @@
             Type = type;
             _gun = gun;
         }
-
-        public void Foo()
-        {
-           
-        }
+        public void Foo(){}
     }
 }
 
